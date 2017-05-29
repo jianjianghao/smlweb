@@ -40,8 +40,8 @@ class Datas extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'add_time' => 'Add Time',
+            'id'           => 'ID',
+            'add_time'     => 'Add Time',
             'send_content' => 'Send Content',
             'recv_content' => 'Recv Content',
             'help_content' => 'Help Content',
