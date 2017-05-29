@@ -2,10 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\Datas;
+use app\models\Users;
 use Yii;
 use yii\web\Controller;
-use app\models\Datas;
-
 
 /**
  * 数据测试
@@ -30,16 +30,36 @@ class DataController extends Controller
      */
     public function actionReceive()
     {
-        $data = Yii::$app->request->post('data');
 
-        $model = new Datas();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+        // $data = Yii::$app->request->post('data');
+
+        $data = 1;
+
+        $model = Users::findOne(1);
+
+        if ($model) {
+            return $model->name;
+        }else{
+            return 'false';
         }
+
+
+
+
+
+
+        
+        // // $model->add_time     = '测试1';
+        // // $model->send_content = '测试2';
+        // // $model->recv_content = '测试3';
+        // // $model->help_content = '测试4';
+
+        // if ($model->load($data) && $model->save()) {
+        //     echo "保存成功！";
+        // } else {
+        //     echo "保存失败！";
+        // }
+
 
     }
 }

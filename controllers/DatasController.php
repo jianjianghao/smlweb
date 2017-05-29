@@ -65,7 +65,18 @@ class DatasController extends Controller
     {
         $model = new Datas();
 
+<<<<<<< HEAD
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+=======
+        
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $data = Yii::$app->request->post();
+
+            echo "<pre>";
+            print_r($data);
+            die;
+>>>>>>> origin/hjh-develop
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

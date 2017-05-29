@@ -36,7 +36,12 @@ NavBar::begin([
 echo Nav::widget([
     'options' => ['class' => 'navbar-nav navbar-right'],
     'items'   => [
+<<<<<<< HEAD
         ['label' => '测试', 'url' => ['/data/send']],
+=======
+        ['label' => '发送测试', 'url' => ['/data/send']],
+        ['label' => '接收测试', 'url' => ['/data/receive']],
+>>>>>>> origin/hjh-develop
         ['label' => '数据', 'url' => ['/datas/index']],
         ['label' => '设备', 'url' => ['/devices/index']],
         ['label' => '位置', 'url' => ['/locations/index']],
